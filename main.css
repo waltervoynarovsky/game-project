@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.question-container {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}/*# sourceMappingURL=main.css.map */
