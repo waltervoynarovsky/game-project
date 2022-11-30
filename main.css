@@ -8,4 +8,21 @@
   margin-top: 1rem;
   display: grid;
   gap: 1rem;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+.question-card {
+  margin: 1rem;
+  border: 2px solid brown;
+  padding: 1rem;
+}
+
+.submit-button {
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
