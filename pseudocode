@@ -4,10 +4,8 @@ The page should greet player with message containing game's name and explaining 
 It should generate 10 questions on the page and take predefined answers A-D:
 -Create 20 questions and answers.
 There should be a counter in top corner keeping track of player's score.
--Basic counter, maybe border and score going up to 10
-When player chooses correct answer, it should indicate it with a colour and counter update.
--Get an id of what does user click and if the ID matches 'right' answer, then make the border of the questions green, add 1 to the counter, and disable asnwering same question again (although it seems difficult to do...for now)
-If the answer is wrong, it also must indicate with a colour, but counter stays the same.
 
-- If the ID of what user clicked is a 'wrong answer' then change border to red and if possible disable option to answer again.
-  Upon finishing the game, it should display a message with player's score and some little comment and refresh option to start again.
+Loop through the event.target.value and compare if answers that checked == true
+are same as the quesionsArray.right
+
+is checked: true === questionsArray.right
