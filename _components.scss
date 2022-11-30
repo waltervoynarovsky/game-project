@@ -1,3 +1,9 @@
+@use "./variables" as *;
+
+main {
+  background-color: $color-brown;
+}
+
 .question-container {
   margin-top: 1rem;
   display: grid;
@@ -5,12 +11,24 @@
   display: grid;
   align-items: center;
   text-align: center;
+  align-content: center;
+  background-color: $color-green;
 }
 
 .question-card {
-  margin: 1rem;
-  border: 2px solid brown;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  border: 2px solid $color-brown;
   padding: 1rem;
+  background-color: $color-green;
+  border-radius: 20px;
+  min-width: 60vw;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .submit-button {
@@ -19,4 +37,39 @@
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.welcome-message {
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: #4b4237;
+  font-size: 2rem;
+}
+.question-text {
+  font-size: 1.2rem;
+}
+
+button {
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: $color-green;
+  color: #fff;
+  border: 0px;
+  border-radius: 3px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 725px) {
+  .welcome-message {
+    max-height: 20vh;
+    font-size: 1rem;
+  }
+  .question-card {
+    display: grid;
+    min-width: 100vw;
+  }
 }

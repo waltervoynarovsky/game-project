@@ -1,17 +1,18 @@
 const questionsArray = [
   {
-    text: "does this game work?",
+    text: "Does this game work?",
     options: {
-      a: "no",
-      b: "maybe",
-      c: "maybe not",
-      d: "maybe yes",
+      a: "No",
+      b: "Maybe",
+      c: "Maybe not",
+      d: "Yes",
     },
     right: "maybe yes",
+    id: "1",
   },
 
   {
-    text: "Upon coronation, what name did Aragon take?",
+    text: "Ufter coronation, what name did Aragon take?",
     options: {
       a: "Amandil",
       b: "Arathorn",
@@ -19,6 +20,7 @@ const questionsArray = [
       d: "Elessar",
     },
     right: "Elessar",
+    id: "2",
   },
   {
     text: "What was the name of Tom Bombadil's wife",
@@ -29,6 +31,7 @@ const questionsArray = [
       d: "Lavender",
     },
     right: "Goldberry",
+    id: "3",
   },
   {
     text: "What was Gandalf the Grey called by elves",
@@ -39,6 +42,7 @@ const questionsArray = [
       d: "Blue wizard",
     },
     right: "Mithrandir",
+    id: "4",
   },
   {
     text: "Was Thranduil a:",
@@ -48,7 +52,8 @@ const questionsArray = [
       c: "Duke",
       d: "Steward",
     },
-    right: "Prince",
+    right: "King",
+    id: "5",
   },
   {
     text: "Who from the Fellowship of the Ring became an 'Esquire of Rohan'?",
@@ -59,6 +64,7 @@ const questionsArray = [
       d: "Faramir II",
     },
     right: "Meriadoc Brandybuck",
+    id: "6",
   },
   {
     text: "What do Merry and Pippin steal from Gandalf?",
@@ -69,6 +75,7 @@ const questionsArray = [
       d: "Hat",
     },
     right: "Fireworks",
+    id: "7",
   },
   {
     text: "Who tries to destroy the Ring at the Council of Elrond?",
@@ -79,6 +86,7 @@ const questionsArray = [
       d: "Legolas",
     },
     right: "Gimli",
+    id: "8",
   },
   {
     text: "In The Return of the King, who kills the Witch King?",
@@ -89,6 +97,7 @@ const questionsArray = [
       d: "Eowyn",
     },
     right: "Eowyn",
+    id: "9",
   },
   {
     text: "What was the name of Sam's favorite pony?",
@@ -98,7 +107,8 @@ const questionsArray = [
       c: "Ted",
       d: "Ernie",
     },
-    right: "Billy",
+    right: "Bill",
+    id: "10",
   },
   {
     text: "What is the name of Frodo's gardener?",
@@ -109,6 +119,7 @@ const questionsArray = [
       d: "Odo Proudfoot",
     },
     right: "Samwise Gamgee",
+    id: "11",
   },
   {
     text: "What is the name of Gimli's father?",
@@ -119,6 +130,7 @@ const questionsArray = [
       d: "Thurin",
     },
     right: "Gloin",
+    id: "12",
   },
   {
     text: "What was the name of the ancient sword that cut the One Ring from Sauron's hand?",
@@ -129,6 +141,7 @@ const questionsArray = [
       d: "Sting",
     },
     right: "Narsil",
+    id: "13",
   },
   {
     text: "What was the name of the elvish bread that was Frodo's and Sam's everyday food?",
@@ -139,6 +152,7 @@ const questionsArray = [
       d: "Tharbad",
     },
     right: "Lembas",
+    id: "14",
   },
   {
     text: "Which forest was known for being the last habitation of the Ents and Huorns?",
@@ -149,6 +163,7 @@ const questionsArray = [
       d: "Valinor",
     },
     right: "Fangorn",
+    id: "15",
   },
 ];
 
