@@ -52,7 +52,7 @@ form.addEventListener("submit", (event) => {
   const results = event.target;
   console.log(results.checked);
 
-  if (results["Yes"].checked) {
+  if (results["Shadowfax"].checked) {
     totalScore++;
   }
   if (results["Elessar"].checked) {
