@@ -31,6 +31,16 @@ const generateQuestions = (questionsArray) => {
     </div> `);
   });
 };
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+shuffleArray(questionsArray);
+
 generateQuestions(questionsArray.slice(0, 10));
 
 form.addEventListener("submit", (event) => {
