@@ -40,7 +40,7 @@ form.addEventListener("submit", (event) => {
   let totalScore = 0;
 
   const results = event.target;
-  console.log(results["Yes"].checked);
+  console.log(results.checked);
 
   if (results["Yes"].checked) {
     totalScore++;
