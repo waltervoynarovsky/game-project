@@ -69,15 +69,3 @@ form.addEventListener("submit", (event) => {
     alert(`Congratulations, your total score is ${totalScore}`);
   } else alert(`Try harder next time, your score is ${totalScore}`);
 });
-
-// const results = event.target;
-// console.log(results["maybe yes"].checked);
-// event.target
-
-// LOOP THROUGH THE OPTIONS AND CREATE
-
-// GOOGLE FOR IN (WHICH LOOPS OBJECTS)
-
-// OBJECT KEYS AND OBJECT VALUES - WHICH ONE TO GRAB WHICH TO RANDOMIZE
-
-// ADD VALUE TO THE EVENT
