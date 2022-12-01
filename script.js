@@ -6,15 +6,6 @@ const container = document.querySelector(".question-container");
 
 const form = document.querySelector(".question-form");
 
-// function getRandomInt(max) {
-//   return Math.floor(Math.random() * max);
-// }
-
-// questionsArray.forEach((element) => {
-//   const randomizedAnswers = getRandomInt(element.options);
-//   return randomizedAnswers
-// });
-
 const generateQuestions = (questionsArray) => {
   questionsArray.forEach((question) => {
     return (container.innerHTML += `<div class=question-card>
@@ -31,16 +22,6 @@ const generateQuestions = (questionsArray) => {
     </div> `);
   });
 };
-
-const shuffleArray = (array) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-};
-
-shuffleArray(questionsArray);
-
 generateQuestions(questionsArray.slice(0, 10));
 
 form.addEventListener("submit", (event) => {
@@ -52,7 +33,7 @@ form.addEventListener("submit", (event) => {
   const results = event.target;
   console.log(results.checked);
 
-  if (results["Shadowfax"].checked) {
+  if (results["Yes"].checked) {
     totalScore++;
   }
   if (results["Elessar"].checked) {
@@ -80,21 +61,6 @@ form.addEventListener("submit", (event) => {
     totalScore++;
   }
   if (results["Bill"].checked) {
-    totalScore++;
-  }
-  if (results["Samwise Gamgee"].checked) {
-    totalScore++;
-  }
-  if (results["Gloin"].checked) {
-    totalScore++;
-  }
-  if (results["Narsil"].checked) {
-    totalScore++;
-  }
-  if (results["Lembas"].checked) {
-    totalScore++;
-  }
-  if (results["Fangorn"].checked) {
     totalScore++;
   }
 

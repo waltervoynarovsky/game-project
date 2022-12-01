@@ -1,13 +1,13 @@
 const questionsArray = [
   {
-    text: "What was is the name of Gandalf's horse?",
+    text: "Does this game work?",
     options: {
-      a: "Hasufel",
-      b: "Shadowfax",
-      c: "Nahar",
-      d: "Noldor",
+      a: "No",
+      b: "Maybe",
+      c: "Maybe not",
+      d: "Yes",
     },
-    right: "Shadowfax",
+    right: "maybe yes",
     id: "1",
   },
 
