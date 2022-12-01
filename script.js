@@ -32,12 +32,12 @@ const generateQuestions = (questionsArray) => {
   });
 };
 
-function shuffleArray(array) {
+const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
-}
+};
 
 shuffleArray(questionsArray);
 
@@ -80,6 +80,15 @@ form.addEventListener("submit", (event) => {
     totalScore++;
   }
   if (results["Bill"].checked) {
+    totalScore++;
+  }
+  if (results["Samwise Gamgee"].checked) {
+    totalScore++;
+  }
+  if (results["Gloin"].checked) {
+    totalScore++;
+  }
+  if (results["Narsil"].checked) {
     totalScore++;
   }
 
