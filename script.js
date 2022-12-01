@@ -33,7 +33,7 @@ form.addEventListener("submit", (event) => {
   const results = event.target;
   console.log(results.checked);
 
-  if (results["Yes"].checked) {
+  if (results["Shadowfax"].checked) {
     totalScore++;
   }
   if (results["Elessar"].checked) {
@@ -67,7 +67,7 @@ form.addEventListener("submit", (event) => {
   console.log(totalScore);
   if (totalScore >= 9) {
     alert(`Congratulations, your total score is ${totalScore}`);
-  } else alert(`Git gud, your score is ${totalScore}`);
+  } else alert(`Try harder next time, your score is ${totalScore}`);
 });
 
 // const results = event.target;
