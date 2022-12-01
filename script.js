@@ -91,6 +91,12 @@ form.addEventListener("submit", (event) => {
   if (results["Narsil"].checked) {
     totalScore++;
   }
+  if (results["Lembas"].checked) {
+    totalScore++;
+  }
+  if (results["Fangorn"].checked) {
+    totalScore++;
+  }
 
   console.log(totalScore);
   if (totalScore >= 9) {
