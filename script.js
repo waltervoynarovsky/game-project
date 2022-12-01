@@ -26,7 +26,6 @@ generateQuestions(questionsArray.slice(0, 10));
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(event);
 
   let totalScore = 0;
 
@@ -64,7 +63,6 @@ form.addEventListener("submit", (event) => {
     totalScore++;
   }
 
-  console.log(totalScore);
   if (totalScore >= 9) {
     alert(`Congratulations, your total score is ${totalScore}`);
   } else alert(`Try harder next time, your score is ${totalScore}`);
