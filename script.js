@@ -30,7 +30,7 @@ form.addEventListener("submit", (event) => {
   let totalScore = 0;
 
   const results = event.target;
-  console.log(results.checked);
+  console.dir(results);
 
   if (results["Shadowfax"].checked) {
     totalScore++;
