@@ -8,60 +8,38 @@ const form = document.querySelector(".question-form");
 
 const generateQuestions = (questionsArray) => {
   questionsArray.forEach((question) => {
+    // ITERATE THROUGH THE OPTIONS AND CREATE THEM
+    const optionsHTML = question.options
+      .map(
+        (optionObj) =>
+          `<input type="radio" id="${optionObj.content}" name="answer-${optionObj.label}"><label for="answer-${optionObj.label}"> ${optionObj.content} </label>`
+      )
+      .join("");
+
     return (container.innerHTML += `<div class=question-card>
       <h2 class="card__heading">Question</h2>
       <p class="question-text">${question.text}</p>
-      <input type="radio" id="${question.options.a}" name="answer${question.id}">  
-      <label for="answer-A"> ${question.options.a} </label>
-      <input type="radio" id="${question.options.b}" name="answer${question.id}">  
-      <label for="answer-B"> ${question.options.b} </label>
-      <input type="radio" id="${question.options.c}" name="answer${question.id}">  
-      <label for="answer-C"> ${question.options.c} </label>
-      <input type="radio" id="${question.options.d}" name="answer${question.id}">  
-      <label for="answer-D"> ${question.options.d} </label>
+      ${optionsHTML}
     </div> `);
   });
 };
-generateQuestions(questionsArray.slice(0, 10));
+generateQuestions(questionsArray.slice(0, 10).sort(() => Math.random() - 0.5));
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
+  const results = event.target;
 
   let totalScore = 0;
 
-  const results = event.target;
-  console.dir(results);
-
-  if (results["Shadowfax"].checked) {
-    totalScore++;
-  }
-  if (results["Elessar"].checked) {
-    totalScore++;
-  }
-  if (results["Goldberry"].checked) {
-    totalScore++;
-  }
-  if (results["Mithrandir"].checked) {
-    totalScore++;
-  }
-  if (results["King"].checked) {
-    totalScore++;
-  }
-  if (results["Meriadoc Brandybuck"].checked) {
-    totalScore++;
-  }
-  if (results["Fireworks"].checked) {
-    totalScore++;
-  }
-  if (results["Gimli"].checked) {
-    totalScore++;
-  }
-  if (results["Eowyn"].checked) {
-    totalScore++;
-  }
-  if (results["Bill"].checked) {
-    totalScore++;
-  }
+  // LOOP THROUGH THE DATA
+  // - MAKE SURE IT IS THE SAME SIZE AS YOUR GENERATED QUESTIONS
+  questionsArray.slice(0, 10).forEach((questionObj) => {
+    // GET ACCESS TO THE VALUE STORED ON THE OBJECT
+    const correctInput = questionObj.right;
+    // USE IT IN THE SQUARE BRACKETS TO ACCESS THE RADIO BUTTON WITH THE SAME ID
+    if (results[correctInput].checked) {
+      totalScore++;
+    }
+  });
 
   if (totalScore >= 9) {
     alert(`Congratulations, your total score is ${totalScore}`);
